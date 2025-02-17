@@ -37,7 +37,7 @@ body {
   font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: #23c93c;
+  color: #23c73c;
   margin-bottom: 10px;
 }
 
@@ -46,4 +46,35 @@ body {
 }
 
 .feature__description {
+}
+
+.cta {
+  padding: 100px;
+  /* rgb: definiamo il colore attraverso 3 parametri (red, green, blue) */
+  /* background-color: rgb(red, green, blue); */
+  /* rgba: il quarto parametro è l'opacità */
+  /* background-color: rgba(red, green, blue, alpha); */
+  /* hsl: definizione del colore attraverso 3 parametri: tinta, saturazione (%) e brillantezza (%)  */
+  /* background-color: hsl(hue, saturation, lightness); */
+  /* hsla: il quarto parametro è l'opacità  */
+  /* background-color: hsla(hue, saturation, lightness, alpha); */
+  background-color: #5bb471;
+  color: #fff;
+  text-align: center;
+}
+
+.cta__description {
+  padding: 15px 0;
+  color: #dbdbdb;
+}
+
+button {
+  color: none;
+  border: none;
+}
+
+.cta__button {
+  /* shorthand top, right, bottom and left */
+  /* padding: 30px 5px 0 10px; */
+  padding: 10px 20px;
 }

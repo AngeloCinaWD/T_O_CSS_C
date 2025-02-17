@@ -1,0 +1,43 @@
+/* i selettori CSS permettono di collegare il css all'html */
+
+/* Universal Selector, proprietà applicate a tutti gli elementi */
+/* ogni browser ha delle proprietà css applicate di default */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Element Selector, selezione attraverso il tipo di elemento HTML, ad esempio il body o un div etc */
+body {
+  /* di solito si utilizza un colore che sia leggermente più scuro del bianco puro come sfondo per i siti */
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* div {
+  color: blue;
+} */
+
+/* Class Selector */
+/* uno dei selettori per selezionare un elemento specifico */
+.hero {
+  /* color: red; */
+
+  /* il padding crea una distanza dal bordo al contenuto */
+  /* in questo modo setto un padding su tutti i lati: top, down, right e left */
+  padding: 100px;
+}
+
+.hero__title {
+  color: black;
+}
+
+.hero__description {
+  color: #81da76;
+}
+
+/* ID Selector */
+/* l'id selector va utilizzato se si vuole applicare uno stile solo una volta in tutta l'app */
+#hero__highlight {
+  color: #dbfbe0;
+}

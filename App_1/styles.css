@@ -50,14 +50,6 @@ body {
 
 .cta {
   padding: 100px;
-  /* rgb: definiamo il colore attraverso 3 parametri (red, green, blue) */
-  /* background-color: rgb(red, green, blue); */
-  /* rgba: il quarto parametro è l'opacità */
-  /* background-color: rgba(red, green, blue, alpha); */
-  /* hsl: definizione del colore attraverso 3 parametri: tinta, saturazione (%) e brillantezza (%)  */
-  /* background-color: hsl(hue, saturation, lightness); */
-  /* hsla: il quarto parametro è l'opacità  */
-  /* background-color: hsla(hue, saturation, lightness, alpha); */
   background-color: #5bb471;
   color: #fff;
   text-align: center;
@@ -74,7 +66,5 @@ button {
 }
 
 .cta__button {
-  /* shorthand top, right, bottom and left */
-  /* padding: 30px 5px 0 10px; */
   padding: 10px 20px;
 }

@@ -6,7 +6,10 @@
 body {
   background-color: #f7f7f7;
   color: #333;
+  /* la prima famiglia di font indicata viene importata nell'html tramite link a google, se non c'è questa viene utilizzata la famiglia indicata dopo come fallback */
+  font-family: 'Poppins', Times, serif;
 }
+
 .hero {
   padding: 100px;
 }
@@ -21,4 +24,39 @@ body {
 
 #hero__highlight {
   color: #dbfbe0;
+}
+
+.feature {
+  padding: 100px;
+}
+
+.feature__item {
+  /* padding solo top and bottom, non left and right */
+  padding: 30px 0px;
+}
+
+.feature__title {
+  /* rem, dimensioni relative alla root del browser. 1rem è 16px */
+  font-size: 2rem;
+  /* spessore del font */
+  font-weight: 500;
+  /* proprietà per modificare il testo */
+  text-transform: uppercase;
+
+  color: #23c93c;
+
+  /* margin, proprietà che aggiunge spazio al di fuori del box di ogni elemento, il padding lo aggiunge all'interno */
+  margin-bottom: 10px;
+}
+
+.feature__title--selected {
+  text-decoration: underline;
+}
+
+.feature__description {
+  /* text-align: right;
+  letter-spacing: 0.5rem;
+  line-height: 2.4rem;
+  word-spacing: 3rem;
+  white-space: nowrap; */
 }

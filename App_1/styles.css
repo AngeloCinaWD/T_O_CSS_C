@@ -1,3 +1,7 @@
+/* ================================ */
+/* 1. Selectors & Basic Properties - Hero Section */
+/* ================================ */
+
 * {
   padding: 0;
   margin: 0;
@@ -26,6 +30,10 @@ body {
   color: #dbfbe0;
 }
 
+/* ================================ */
+/* 2. Fonts - Features Section */
+/* ================================ */
+
 .feature {
   padding: 100px;
 }
@@ -49,6 +57,10 @@ body {
 .feature__description {
 }
 
+/* ================================ */
+/* 3. Colors - Call to Action Section */
+/* ================================ */
+
 .cta {
   padding: 100px;
   background-color: #5bb471;
@@ -70,6 +82,9 @@ button {
   padding: 10px 20px;
 }
 
+/* ================================ */
+/* 4. Box Model - Video Section */
+/* ================================ */
 .video {
   text-align: center;
   padding: 100px;
@@ -143,7 +158,6 @@ button {
   background-color: #f8f9fa;
 }
 
-/* ho 2 elementi nel container, settando ad ognuno flex: 1 sto indicando che ogni elemento occuperà il 50% dello spazio, se mettessi ad uno il valore 2 ed all'altro 1 vuol dire che dividerei lo pazio in 3 unità, il primo elemento ne occuperebbe 2 ed il secondo 1 */
 .element__left {
   flex: 1;
 }
@@ -181,7 +195,6 @@ button {
   color: #5d5d5d;
 }
 
-/* pseudo class :before */
 .element__list-item:before {
   content: '→';
   margin-right: 10px;
@@ -194,13 +207,11 @@ button {
   gap: 8px;
 }
 
-/* selezione specifica di un elemento */
 .element__form-group label {
   color: #333;
   font-weight: 500;
 }
 
-/* selezione di più elementi ai quali applicare le stesse proprietà css */
 .element__form-group input,
 .element__form-group select {
   padding: 12px;
@@ -209,7 +220,6 @@ button {
   font-family: inherit;
 }
 
-/* pseudo class :focus */
 .element__form-group input:focus,
 .element__form-group select:focus {
   outline: none;
@@ -237,7 +247,6 @@ button {
   transition: background-color 0.2s;
 }
 
-/* pseudo class :hover */
 .element__button:hover {
   background-color: #2db14e;
 }

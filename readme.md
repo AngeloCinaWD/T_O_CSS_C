@@ -9,3 +9,9 @@
 [flexbox_cheat_sheet_2](https://flexbox.malven.co/)
 
 [grid_cheat_sheet](https://grid.malven.co/)
+
+![box_model](./box_model.png)
+
+![box_sizing](./box-sizing.webp)
+
+[cssmatic](https://www.cssmatic.com/)

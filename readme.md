@@ -15,3 +15,9 @@
 [cssmatic](https://www.cssmatic.com/)
 
 ![flexbox](./flexbox.jpeg)
+
+[::before](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)
+
+[:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
+
+[:hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)

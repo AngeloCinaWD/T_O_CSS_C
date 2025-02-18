@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  /* setto universalmente il modo di calcolare le dimensioni degli elementi */
   box-sizing: border-box;
 }
 
@@ -71,10 +70,6 @@ button {
   padding: 10px 20px;
 }
 
-/* un elemento html è composto da diverse parti: margin, border, padding e content. Il content ha una larghezza ed una altezza */
-/* il concetto di box model è importante perchè ci permette di capire come gli elementi html interagiscono tra di loro nello spazio */
-/* un elemento ha una larghezza ed una altezza, di norma queste dimensioni non includono il padding o il border, ad esempio una immagine è 100px più il padding 50px ed il border 10px, la larghezza totale sarebbe 100 + 50 + 50 (padding right + padding left) + 10 + 10 (border right + border left), quindi il totale è 220px. Questo comportamento è quello di default, definibile con la property box-sizing: content-box. Se invece volessimo includere tutto dovremmo definire la property con value border-box, quindi se volessi una immagine con una larghezza totale di 300px, con padding R e L di 50px e border R e L di 10px avrei una width del content di 300 - 50 - 50 - 10 - 10 = 180px  */
-
 .video {
   text-align: center;
   padding: 100px;
@@ -97,7 +92,6 @@ button {
 }
 
 .video__button {
-  /* shorthand per border: size, stile linea, colore */
   border: 1px solid #5bb471;
   background: none;
   padding: 10px 20px;
@@ -110,9 +104,7 @@ button {
 .video__container {
   margin-top: 20px;
   background-color: #ccc;
-  /* la larghezza riferisce al parent, in questo caso il aprent è la section .video che ha una larghezza del 100% ma padding 100px, quindi il 100% del child è dato dal 100% del parent - il padding L e R */
   width: 100%;
   height: 500px;
-  /* utilizzare il tool cssmatic */
   box-shadow: 1px 4px 7px 4px rgba(0, 0, 0, 0.33);
 }

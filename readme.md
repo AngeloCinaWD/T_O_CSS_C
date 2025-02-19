@@ -21,3 +21,5 @@
 [:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
 
 [:hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)
+
+[css object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)

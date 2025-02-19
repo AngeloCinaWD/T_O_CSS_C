@@ -23,3 +23,5 @@
 [:hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)
 
 [css object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+
+[grid properties for columns and rows](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/)

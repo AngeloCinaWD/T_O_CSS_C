@@ -158,6 +158,8 @@ section h2 {
   color: #666666;
 }
 
+/* utilizzare flexbox in questo caso mi darebbe problemi nella distribuzione degli elementi nello spazio: se utilizzassi justify-content: space between in caso di numero dispari di elementi la riga con un numero pari di elementi mi darebbe un buco al centro, utilizzando flex-start avrei un buco a destra */
+/* in questi casi è meglio utilizzare grid */
 /* .latest-list {
   display: flex;
   justify-content: flex-start;
@@ -166,15 +168,26 @@ section h2 {
 } */
 
 .latest-list {
+  /* stabiliamo che l'elemento sia un elemnto contenente una griglia grid, composta da righe e colonne */
   display: grid;
+  /* grid-template-columns e grid-template-row ci permettono di definire righe e colonne della griglia */
+  /* repeat(3, 12px) indica quante colonne e la loro larghezza */
+  /* auto-fit = property di grid, FITS the CURRENTLY AVAILABLE columns into the space by expanding them so that they take up any available space. In pratica definisce il numero di colonne da solo */
+  /* minmax() definisce la larghezza minima e massima che può avere una colonna */
+  /* fr = fractional unit, is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space. That is, they’re all fluid, equal-width columns. */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* distanzio colonne e righe */
   gap: 2rem;
+  /* questa molto probabilmente non serve ma mettendola sono sicuro che tutto sia centrato */
   margin: 0 auto;
+  /* la proprietà align-items allinea il contenuto di una griglia intorno l'asse delle colonne, justify-items lungo l'asse delle righe, justify-content allinea tutto il contenuto di una griglia lungo l'asse delle righe quando il contenuto totale della griglia è più piccolo del container, align-content lungo l'asse delle colonne */
 }
 
 .latest-card {
+  /* la larghezza non serve definirla perchè viene calcolata automaticamente da grid tramite grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); nel container grid, quindi in .latest-list */
   /* min-width: 300px;
   width: 400px; */
+  /* flex-basis: 1; */
   height: 500px;
   border-radius: 8px;
   box-shadow: none;

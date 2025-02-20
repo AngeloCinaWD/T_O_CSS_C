@@ -91,7 +91,7 @@ section h2 {
   flex-basis: 50%;
   /* l'altezza del div è 100% del parent */
   height: 100%;
-  background-color: #e0e0e0;
+  /* background-color: #e0e0e0; */
   /* questa proprietà non si vedrà perchè l'immagine avrà forma rettangolare senza border radius, per vederla la dobbiamo applicare anche all'immagine */
   border-radius: 8px;
 }
@@ -117,6 +117,17 @@ section h2 {
   gap: 1rem;
 }
 
+.featured-content p {
+  color: #4d4d4d;
+}
+
+.featured-footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
 .featured-more {
   color: #fff;
   background: #1d1d1d;
@@ -129,17 +140,6 @@ section h2 {
   background: #414141;
   color: #d9d8d8;
   cursor: pointer;
-}
-
-.featured-footer {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.featured-content p {
-  color: #4d4d4d;
 }
 
 /* 3. Flex/Grid List - Latest Cards */
@@ -188,6 +188,7 @@ section h2 {
   /* min-width: 300px;
   width: 400px; */
   /* flex-basis: 1; */
+  /* do un'altezza fissa alla card che sarà sempre 500px */
   height: 500px;
   border-radius: 8px;
   box-shadow: none;
@@ -197,6 +198,7 @@ section h2 {
 
 .latest-card img {
   width: 100%;
+  /* dò un'altezza fissa all'immagine che sarà sempre il 50% di quella della card che la contiene, grazie ad object-fit: cover l'immagine verrà croppata e non si avranno distorsioni anche cambiandone la larghezza */
   height: 250px;
   object-fit: cover;
 }
@@ -650,11 +652,14 @@ footer p {
   }
 
   .masonry-grid {
+    /* in questo modo gli elementi non saranno più a griglia ma occuperanno tutto lo spazio in larghezza, quindi uno sotto l'altro */
     display: block;
   }
 
   .masonry-item {
+    /* non essendo più una griglia non ho più il gap fra gli elementi, aggiungo un margin-bottom per distanziarli */
     margin-bottom: 1rem;
+    /* gli assegno un'altezza fissa, in questo modo verrà sfruttata la property object-fit altrimenti la foto mi viene mostrata in tutta la sua altezza */
     height: 300px;
   }
 

@@ -439,19 +439,27 @@ section h2 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeate(5, 1fr);
+  /* voglio una griglia che abbia 5 colonne e 5 righe */
+  grid-template-columns: repeat(5, 1fr);
+  /* le righe hanno una altezza fissa */
   grid-template-rows: repeat(5, 150px);
   gap: 1rem;
   max-width: none;
   margin: 0 auto;
+  /* possiamo dare il nome che vogliamo alle aree */
+  /* ogni area corrisponde ad un elemento html */
+  /* definiamo la posizione dell'area nella griglia e lo spazio che occupa */
+  /* in questo modo posso definire anche l'ordine delle aree, ad esempio la b potrebbe essere al posto della a */
   grid-template-areas:
     'a b b c d'
+    /* 'b a a c d' */
     'e e f c g'
     'e e h h m'
     'i k h h m'
     'j k l n n';
 }
 
+/* assegno ogni elemento html ad una area */
 .a {
   grid-area: a;
 }

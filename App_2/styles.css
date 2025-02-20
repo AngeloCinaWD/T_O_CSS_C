@@ -302,7 +302,7 @@ section h2 {
   /* shorthand per grid-column-start e grid-column-end */
   /* scritto così sarebbe la stessa cosa: 1 / 3, cioè inizia alla colonna 1 e finisce alla 3 (la 3 non è compresa) */
   /* https://www.w3schools.com/cssref/tryit.php?filename=trycss_grid-column2 */
-  /* utilizzando la keyword span indico la dimensione dell'elemento, cioè con le colonne gli dico che deve essere largo 2 unità, con le row che deve essere alto 2 unità. non definisco la posizione, ogni elemento viene dopo l'altro, andando ad occupare lo spazio non occupato già da un altro elemento. Gli elementi vengono posizionati sempre partendo dal top-left dello spazio di griglia libero e poi in senso orario */
+  /* utilizzando la keyword span indico la dimensione dell'elemento (span vuol dire campata), cioè con le colonne gli dico che deve essere largo 2 unità, con le row che deve essere alto 2 unità. non definisco la posizione, ogni elemento viene dopo l'altro, andando ad occupare lo spazio non occupato già da un altro elemento. Gli elementi vengono posizionati sempre partendo dal top-left dello spazio di griglia libero e poi in senso orario */
   grid-column: span 2;
   grid-row: span 2;
 }
@@ -335,8 +335,11 @@ section h2 {
 
 .masonry-grid {
   display: grid;
+  /* voglio una griglia composta da 5 colonne con larghezza variabile e non superiore ad una unità */
   grid-template-columns: repeat(5, 1fr);
+  /* 3 righe ad altezza fissa di 200px */
   grid-template-rows: repeat(3, 200px);
+  /* il gap è 16px, un elemento che occupa 2 righe non sarà alto 400px ma 416 perchè nella continuità dell'elemento verrà incluso anche lo spazio di gap di 16px che c'è fra la riga 1 e 2. Senza gap sarebbe alto 400px. */
   gap: 1rem;
   max-width: none;
   margin: 0 auto;
@@ -375,6 +378,7 @@ section h2 {
   grid-row: 2 / 3;
 }
 .item6 {
+  /* questo elemento parte dalla prima colonna ed ha una camapata larga 4 unità */
   grid-column: 1 / span 4;
   grid-row: span 1;
 }
@@ -382,6 +386,42 @@ section h2 {
   grid-column: span 1;
   grid-row: span 1;
 }
+
+/* avrei potuto posizionare gli items in questo modo */
+/* .item1 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.item2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item3 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.item4 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.item5 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.item6 {
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.item7 {
+  grid-column: span 1;
+  grid-row: span 1;
+} */
 
 /* 6. Grid Templates - News Gallery */
 .gallery {

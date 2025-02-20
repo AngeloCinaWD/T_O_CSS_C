@@ -239,6 +239,8 @@ section h2 {
 .hot-card {
   background-color: #e0e0e0;
   border-radius: 8px;
+  /* overflow: hidden = Overflow content is clipped at the element's padding box. There are no scroll bars, and the clipped content is not visible (i.e., clipped content is hidden), but the content still exists. User agents do not add scroll bars and also do not allow users to view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse. The content can be scrolled programmatically (for example, by linking to anchor text, by tabbing to a hidden yet focusable element, or by setting the value of the scrollLeft property or the scrollTo() method), in which case the element box is a scroll container.  */
+  /* senza di questo l'immagina avrebbe un'altezza maggiore di quella del parent ed andrebbe al di fuori, ho definito un'altezza fissa del container di 600px */
   overflow: hidden;
 }
 
@@ -348,6 +350,7 @@ section h2 {
 .masonry-item {
   background-color: #e0e0e0;
   border-radius: 8px;
+  /* overflow: hidden; */
 }
 
 .masonry-item img {
@@ -426,6 +429,7 @@ section h2 {
 /* 6. Grid Templates - News Gallery */
 .gallery {
   padding: 4rem 1rem;
+  background: #f5f5f5;
 }
 
 .gallery-title {
@@ -521,6 +525,9 @@ section h2 {
 footer {
   background: black;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer p {
@@ -530,11 +537,18 @@ footer p {
 }
 
 .hot-card {
+  /* dichiaro la posizione relative per questo elemento, questo mi consente di posizionare elementi in position absolute riferendomi ad esso */
+  /* di default, se non è specificato un parent con position relative, l'elemento in absolute si riferisce al body*/
   position: relative;
 }
 
 .hot-overlay {
+  /* dichiaro che questo elemento deve essere posizionato in maniera absolute rispetto al suo parent che è relative */
   position: absolute;
+  /* tramite proprietà top, bottom, left, right dichiaro da dove parte e dove arriva lo spazio occupato dall'elemento */
+  /* i valori sono rispetto al margine di partenza, cioè se dico bottom: 0 vuol dire che sto a zero px di distanza dal margine inferiore, se indico top: 10px vuol dire che sto a 10px di distanza dal margine superiore */
+  /* in questo caso l'altezza dell'elemento è data dal suo contenuto, se aggiungessi top: 0 coprirebbe tutto il parent */
+  /* il contenuto parte da top-left */
   bottom: 0;
   left: 0;
   right: 0;
@@ -548,6 +562,8 @@ footer p {
 }
 
 .masonry-item::before {
+  /* la proprietà content indica cosa ci deve essere prima o dopo l'elemento a cui è applicata lo pseudo-element */
+  /* utilizzando gli pseudo-element in questo modo devo utilizzare il :before per settare il layout per il background ed il :after per settare il testo */
   content: '';
   position: absolute;
   top: 0;
@@ -557,6 +573,7 @@ footer p {
   background: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 8px;
 }
 
 .masonry-item::after {
@@ -572,10 +589,53 @@ footer p {
   transition: opacity 0.3s ease;
 }
 
+/* con queste impostazioni posso ottenere lo stesso risultato senza utilizzare 2 pseudo-elements */
+/* .masonry-item::after {
+  content: 'View Story';
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+} */
+
 .masonry-item:hover::before,
 .masonry-item:hover::after {
   opacity: 1;
 }
+
+/* rifatto tutto senza pseudo-element */
+/* c'è bisogno di aggiungere la property overflow: hidden a .masonry-item ed un elemento in più nell'html */
+/* .prova {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.prova:hover {
+  opacity: 1;
+} */
 
 /* Responsive Media Queries */
 @media screen and (max-width: 768px) {
